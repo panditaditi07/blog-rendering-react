@@ -5,8 +5,8 @@ function NotFound() {
   return (
     <div className={style["not-found-container"]}>
       <img
-        src="https://freefrontend.com/assets/img/html-funny-404-pages/Pure-CSS-404-Error-Page.png"
-        alt=""
+        src="https://files.muzli.space/72036d40be5a15a8ec3cfed328d57549.webp"
+        alt="Not found"
         className={style["image"]}
       ></img>
       <Link to="/">

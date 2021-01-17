@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# React Blog rendering with Nodejs Backend API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a Project in which Blog Cards are rendered using the NodeJS Backend API and Frontend is made using React.\
+To get a particular Blog information, rendering is done using React Routing.
 
-## Available Scripts
+# API End Points:
 
-In the project directory, you can run:
+The Endpoint to get all the Blog cards:
 
-### `npm start`
+    /
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Here, we will get all the blog cards if we use this endpoint.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Endpoint to get a particular Blog information by Id:
 
-### `npm test`
+    /blogs/blogId
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Here , we will get the particular Blog information at this endpoint.
 
-### `npm run build`
+Any invalid endpoint will lead to 404 Page Not Found.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Data Source:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The data is stored in json file in the Nodejs backend.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Main Component in Backend:
 
-### `npm run eject`
+The Main Component is responsible for starting the Node Express Server on Localhost at the Port number 5000.\
+The other function of the Main Component is to redirect any request on "/" to the Routes Component.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Routes Component in Backend:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Routes Component is used to process any request received on "/".\
+Depending on the request route(path) & the http request type, the router will redirect the process to it's equivalent Controllers.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Controllers Component in Backend:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The Controllers Component is used to process the request, perform some operations depending on the type of request, & send back a response, either a Success Response or an Error Response.\
+The Controller for the Endpoint "/" will return all the Blog Objects if the Blogs are present, otherwise it will return an Error Message.\
+The Controller for the Endpoint "/blogId" will return the Blog Object with matching Id if the Blog is present, otherwise it will return an Error Message.
 
-## Learn More
+# Main Component in Frontend:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The Main Component is responsible for running the react project on Localhost at the Port number 3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Routes Component in Frontend:
 
-### Code Splitting
+The Routes Component will display the content which is there in "/" endpoint.\
+Depending on the request route(path), the router will redirect the process to it's equivalent Routes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Components in Frontend:
 
-### Analyzing the Bundle Size
+There are Navigation and Footer Components which display the header and footer component respectively.\
+The header and footer Components are displayed on all the pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- # Pages:
 
-### Making a Progressive Web App
+  This will display all the page modules present in this folder.
+  It contains Home Page, Profile Page and Not found Page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- # Routers:
+  This file contains all the routes. The routes are given to the component,based on the which the page will be displayed according to the endpoint.
 
-### Advanced Configuration
+# To run the Project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- ## For Frontend:
 
-### Deployment
+  Navigate into Frontend folder.\
+  Then run this command only once:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+      npm install
 
-### `npm run build` fails to minify
+  To install all the dependencies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Then run the command:
+
+      npm run start
+
+  To start the React Server whenever you need to see the Webpage.
+
+- ## For Backend:
+
+  Navigate into Backend folder.\
+  Then run this command only once:
+
+      npm install
+
+  To install all the dependencies.
+
+  Then run the command:
+
+      npm run start
+
+  To start the Backend Server whenever you need to send a get api request to the Server.
+
+  Or the Backend is also hosted on Heroku.\
+  This link can also be used to send a get api request.\
+  [Link for Backend](https://blog-backend-nodejs.herokuapp.com/blogs)
