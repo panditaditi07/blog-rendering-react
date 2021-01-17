@@ -6,9 +6,6 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        {/* <div className={style["footer-heading"]}>
-          <p>Follow us on social media to know more about us</p>
-        </div> */}
         <div className={style["icons"]}>
           <FontAwesomeIcon
             icon={["fab", "facebook"]}

@@ -35,23 +35,6 @@ class Blog extends Component {
       });
   };
 
-  // componentDidUpdate = () => {
-  //   if (this.state.blog !== undefined) {
-  //     if (this.state.blog.id !== this.props.match.params.id) {
-  //       fetch(`${url}${this.props.match.params.id}`)
-  //         .then((response) => {
-  //           return response.json();
-  //         })
-  //         .then((data) => {
-  //           this.setState({ blog: data.data, status: data.status });
-  //         })
-  //         .catch((err) => {
-  //           console.log(err);
-  //         });
-  //     }
-  //   }
-  // };
-
   renderBlog(id) {
     fetch(`${url}${id}`)
       .then((response) => {
@@ -118,10 +101,9 @@ class Blog extends Component {
                           </div>
                         );
                       })
-                    : console.log("No related links")}
+                    : console.log("No links")}
                 </div>
               </div>
-
               <Footer />
             </div>
           </>
