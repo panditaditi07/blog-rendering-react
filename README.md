@@ -56,7 +56,7 @@ The header and footer Components are displayed on all the pages.
 - # Pages:
 
   This will display all the page modules present in this folder.
-  It contains Home Page, Profile Page and Not found Page.
+  It contains Blog Cards Page, Blog Information Page and Not found Page.
 
 - # Routers:
   This file contains all the routes. The routes are given to the component,based on the which the page will be displayed according to the endpoint.
