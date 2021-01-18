@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Blogs from "../pages/Blogs-cards";
+import Blogs from "../pages/BlogCards";
 import Blog from "../pages/Blog";
 import NotFound from "../components/NotFound";
 

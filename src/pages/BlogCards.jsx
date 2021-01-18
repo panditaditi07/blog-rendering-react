@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import initFontAwesome from "../components/initFontAwesome";
-import styles from "./Blog-cards.module.css";
+import styles from "./BlogCards.module.css";
 import NotFound from "../components/NotFound";
 import Loader from "react-loader-spinner";
 

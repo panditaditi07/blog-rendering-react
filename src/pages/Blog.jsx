@@ -92,7 +92,7 @@ class Blog extends Component {
                             <Link
                               to={`/blogs/${link.id}`}
                               id={link.id}
-                              className={styles["create-link"]}
+                              className={styles["new-link"]}
                               onClick={() => this.renderBlog(link.id)}
                             >
                               {link.title}
