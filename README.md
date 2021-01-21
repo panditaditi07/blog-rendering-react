@@ -96,3 +96,7 @@ The header and footer Components are displayed on all the pages.
   Or the Backend is also hosted on Heroku.\
   This link can also be used to send a get api request.\
   [Link for Backend](https://blog-backend-nodejs.herokuapp.com/blogs)
+
+  The Project is hosted on Vercell:
+
+  [Hosted Link](https://blog-rendering-react-jet.vercel.app/)
